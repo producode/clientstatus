@@ -27,4 +27,38 @@ public class PQ06 {
         return response;
     }
 
+    private EJ01request asignarEntidates(RequestDetallePaqueteCliente request){
+        EJ01request tnRequest = new Ej01Request();
+
+        tnRequest.setFuncion(request.getData().getFuncion());
+        tnRequest.setCentro();
+        tnRequest.setNumclie(request.getData().getNumclie());
+        tnRequest.setTipoDoc();
+        tnRequest.setNroDoc();
+        tnRequest.setOrgbkb();
+        tnRequest.setSegmen();
+        tnRequest.setNomape();
+        tnRequest.setPaq();
+        tnRequest.setNropaq(request.getData().getNropaq());
+        tnRequest.setEstado();
+        tnRequest.setProdcom();
+        tnRequest.setCodcamp();
+        tnRequest.setCodvend();
+        tnRequest.setCanal();
+        tnRequest.setFecalta();
+        tnRequest.setProduct();
+        tnRequest.setRechazo();
+        tnRequest.setNumprod();
+        tnRequest.setNrotram();
+        tnRequest.setLimvisa();
+        tnRequest.setLimmast();
+        tnRequest.setLimcc();
+        tnRequest.setLimpres();
+        tnRequest.setPerboni();
+        tnRequest.setBonif();
+        tnRequest.setNrocar();
+        tnRequest.setNrocomi();
+
+    }
+
 }
