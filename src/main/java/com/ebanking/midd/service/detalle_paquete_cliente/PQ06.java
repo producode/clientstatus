@@ -30,6 +30,8 @@ public class PQ06 {
     private EJ01request asignarEntidates(RequestDetallePaqueteCliente request){
         EJ01request tnRequest = new Ej01Request();
 
+
+        //comentario extra
         tnRequest.setFuncion(request.getData().getFuncion());
         tnRequest.setCentro();
         tnRequest.setNumclie(request.getData().getNumclie());
