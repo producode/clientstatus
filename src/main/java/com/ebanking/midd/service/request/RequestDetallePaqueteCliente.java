@@ -1,15 +1,15 @@
 package com.ebanking.midd.service.request;
 
-public class Bsvreq {
+public class RequestDetallePaqueteCliente {
     private Header header;
     private Data data;
 
-    public Bsvreq(Header header, Data data) {
+    public RequestDetallePaqueteCliente(Header header, Data data) {
         this.header = header;
         this.data = data;
     }
 
-    public Bsvreq() {
+    public RequestDetallePaqueteCliente() {
         this(new Header(), new Data());
     }
 

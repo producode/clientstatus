@@ -1,17 +1,17 @@
 package com.ebanking.midd.service.detalle_paquete_cliente;
 
-import com.ebanking.midd.service.request.Bsvreq;
+import com.ebanking.midd.service.request.RequestDetallePaqueteCliente;
 import com.ebanking.midd.service.request.Header;
-import com.ebanking.midd.service.response.bsvrsp.Bsvrsp;
+import com.ebanking.midd.service.response.bsvrsp.ResponseDetallePaqueteCliente;
 
 public class PQ06 {
-    public static Bsvrsp execute(Header reqHeader, Bsvreq resquest, Bsvrsp response){
+    public static ResponseDetallePaqueteCliente execute(Header reqHeader, RequestDetallePaqueteCliente resquest, ResponseDetallePaqueteCliente response){
         resquest.setHeader(reqHeader);
 
         EJ01request tnRequest = new Ej01Request();
         //Settear valores de tnRquest
 
-        Bsvrsp tnResponse = AssetsLiabitiesClient.eJ01(tnRequest);
+        ResponseDetallePaqueteCliente tnResponse = AssetsLiabitiesClient.eJ01(tnRequest);
 
         MiddServicesUtil.initResponseHeader(tnResponse, response);
 
