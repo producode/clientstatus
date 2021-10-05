@@ -8,14 +8,14 @@ public class PQ06 {
     public static ResponseDetallePaqueteCliente execute(Header reqHeader, RequestDetallePaqueteCliente resquest, ResponseDetallePaqueteCliente response){
         resquest.setHeader(reqHeader);
 
-        EJ01request tnRequest = new Ej01Request();
+        Pq06request tnRequest = new Pq06Request();
         //Settear valores de tnRquest
-
+        asignarEntidates(resquest);
         ResponseDetallePaqueteCliente tnResponse = AssetsLiabitiesClient.eJ01(tnRequest);
 
         MiddServicesUtil.initResponseHeader(tnResponse, response);
 
-        Ej01Output tnResponseData = tnResponse.getData();
+        Pq06Output tnResponseData = tnResponse.getData();
         if(!tnResponseData.isNull()){
             response.setProducto(tnResponseData.getProducto());
             response.setProd_desc(tnResponseData.getProd_desc());
@@ -27,9 +27,8 @@ public class PQ06 {
         return response;
     }
 
-    private EJ01request asignarEntidates(RequestDetallePaqueteCliente request){
-        EJ01request tnRequest = new Ej01Request();
-
+    private Pq06request asignarEntidates(RequestDetallePaqueteCliente request){
+        Pq06request tnRequest = new Pq06Request();
 
         tnRequest.setFuncion(request.getData().getFuncion());
         tnRequest.setCentro();
